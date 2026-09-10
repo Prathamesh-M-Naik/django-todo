@@ -28,10 +28,7 @@ SECRET_KEY = os.environ.get(
 
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
-
-if os.environ.get("RENDER_EXTERNAL_HOSTNAME"):
-    ALLOWED_HOSTS.append(os.environ.get("RENDER_EXTERNAL_HOSTNAME"))
+ALLOWED_HOSTS = ["*"]
 # SECURITY WARNING: dn't run with debug turned on in production!
 DEBUG = True
 
